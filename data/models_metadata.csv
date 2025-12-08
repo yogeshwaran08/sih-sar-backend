@@ -1,0 +1,3 @@
+model_id,model,version,dataset
+sar-colorizer-v1,SAR-Colorizer,v1.0,SAR-Color-Set
+sar-colorizer-v2,SAR-Colorizer,v2.0,SAR-Enhanced-Set

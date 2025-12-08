@@ -2,11 +2,12 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from app.config import settings
 from app.routes.auth import router as auth_router
+from app.routes.metrics import router as metrics_router
 
 # Initialize FastAPI app
 app = FastAPI(
-    title="SIH Backend API",
-    description="REST API with JWT Authentication",
+    title="SIH SAR Colorization API",
+    description="REST API with JWT Authentication and Model Metrics",
     version="1.0.0"
 )
 
@@ -21,15 +22,20 @@ app.add_middleware(
 
 # Include routers
 app.include_router(auth_router)
+app.include_router(metrics_router)
 
 
 @app.get("/", tags=["root"])
 async def root():
     """Root endpoint"""
     return {
-        "message": "Welcome to SIH Backend API",
+        "message": "Welcome to SIH SAR Colorization API",
         "version": "1.0.0",
-        "docs": "/docs"
+        "docs": "/docs",
+        "endpoints": {
+            "auth": "/auth",
+            "metrics": "/api/models/metrics"
+        }
     }
 
 
