@@ -12,3 +12,6 @@ bcrypt==4.1.1
 alembic==1.13.0
 email-validator==2.1.0
 pandas==2.1.4
+Pillow==10.1.0
+numpy==1.24.3
+opencv-python==4.8.1.78

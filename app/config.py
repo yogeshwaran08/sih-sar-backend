@@ -17,6 +17,9 @@ class Settings(BaseSettings):
     SERVER_HOST: str = "localhost"
     SERVER_PORT: int = 8000
     
+    # Gemini AI
+    GEMINI_API_KEY: str = "AIzaSyCAoVEjNcfFX0WIei3x3soMcUDXjvyDeUs"
+    
     class Config:
         env_file = ".env"
 

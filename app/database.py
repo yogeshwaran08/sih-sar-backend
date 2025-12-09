@@ -4,7 +4,7 @@ from app.config import settings
 
 engine = create_engine(
     settings.DATABASE_URL,
-    echo=True,  # Set to False in production
+    echo=True, 
     future=True
 )
 
